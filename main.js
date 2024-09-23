@@ -17,7 +17,7 @@ modeSwitch.addEventListener("click", () => {
     const isDarkMode = body.classList.contains("dark");
     modeSwitch.textContent = isDarkMode ? "Light Mode" : "Dark Mode";
     
-    // local storage 
+    // setting local storage accordingly
     localStorage.setItem("mode", isDarkMode ? "Dark Mode" : "Light Mode");
     });
 
@@ -33,11 +33,6 @@ const updateTime = () => {
     minuteHand.style.transform = `rotate(${minToDeg}deg)`;
     hourHand.style.transform = `rotate(${hourToDeg}deg)`;
 }
-
-
-
-
-
 
 
 setInterval(updateTime, 1000);

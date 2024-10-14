@@ -16,17 +16,17 @@ modeSwitch.addEventListener("click", () => {
     // checking if the dark mode is currently applied 
     const isDarkMode = body.classList.contains("dark");
     modeSwitch.textContent = isDarkMode ? "Light Mode" : "Dark Mode";
-    
+
     // setting local storage accordingly
     localStorage.setItem("mode", isDarkMode ? "Dark Mode" : "Light Mode");
-    });
+});
 
 const updateTime = () => {
     // get current time and calculate in degrees for clock hand 
     let date = new Date(),
-    secToDeg = (date.getSeconds()/60) * 360,
-    minToDeg = (date.getMinutes()/60) * 360,
-    hourToDeg = (date.getHours()/12) * 360;
+        secToDeg = (date.getSeconds() / 60) * 360,
+        minToDeg = (date.getMinutes() / 60) * 360,
+        hourToDeg = (date.getHours() / 12) * 360;
 
     // rotate the clock hands to the appropriate degree based on their current time 
     secondHand.style.transform = `rotate(${secToDeg}deg)`;
